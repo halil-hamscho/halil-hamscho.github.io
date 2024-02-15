@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Happy Valentine's Day!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href="Nina.css">
+</head>
+<body>
+    <img src='football.jpg' alt='Football' class='top-left'>
+    <img src='funy.jpg' alt='Funny Moment' class='top-right'>
+    <img src='green.jpg' alt='Green Scenery' class='bottom-left'>
+    <img src='rogelios.jpg' alt='Rogelio's' class='bottom-right'>
+
+    <div class="container">
+        <div class="wrap">
+            <a href="#" class="start">Click Here to Start</a>
+            <div class="messages">
+                <div class="intro_message">
+                    Dearest Nina, as we bask in the joy of Valentine's Day and 
+                    reflect on our 4 months together, 
+                    I've crafted this special space to open my heart to you. 
+                    You've often asked why I chose to be by your side - there's no 
+                    better way to express this than through a heartfelt deliveration 
+                    of my favorite things that I truly love about you.
+                </div>
+                <!-- Secret Messages -->
+                <div class="secret_message">Your compassion and kindness illuminate every room, bringing warmth to my heart.</div>
+                <div class="secret_message">Each day, your intelligence and wisdom inspire me, enriching our lives together.</div>
+                <div class="secret_message">Your sense of humor is a constant source of joy, always bringing a smile to my face.</div>
+                <div class="secret_message">Your unwavering dedication to love me, flaws and all, is a testament to the depth of your heart.</div>
+                <div class="secret_message">I cherish your love for all that I am and do, embracing every aspect of my being.</div>
+                <div class="secret_message">The peace and tranquility you bring to my life are my sanctuary, easing the day's burdens.</div>
+                <div class="secret_message">Your astuteness and resolve, standing firm against any challenge, never cease to amaze me.</div>
+                <div class="secret_message">Your passion for helping others and seeing beauty in people and life is truly inspiring.</div>
+                <div class="secret_message">The way your upbringing has shaped you into the successful, loving woman you are today fills me with pride.</div>
+                <div class="secret_message">And most of all, your unwavering support, even through failures, mistakes, and regrets, solidifies my belief in us. Your presence is my most cherished treasure.</div>
+
+
+
+
+                <!-- More secret messages here -->
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function showMessages(index, messages) {
+            if (index < messages.length) {
+                messages.eq(index).slideDown(2500, function() {
+                    showMessages(index + 1, messages);
+                });
+            }
+        }
+
+        $('.start').click(function (e) {
+            e.preventDefault();
+            $(this).hide();
+            showMessages(0, $('.intro_message, .secret_message'));
+        });
+    </script>
+</body>
+</html>
